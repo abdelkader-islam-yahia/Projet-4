@@ -1,0 +1,70 @@
+#DEBUT
+
+#admettant qu'il existe une fonction random qui renvoie un chiffre aleatoire
+#admettant qu'il existe une fonction input qui renvoie l'entrer d'un joueur
+
+#assigner a la variable jeu la liste ["pierre","feuille", "ciseaux"] 
+#assigner a randVar le retour de l'execution de la fonction random qui renvoie un nombre aléatoire etant sois [0-1-2] correspondant a la variable jeu 
+#assigner a la variable cpu un element d'index randVar
+#definir joueur avec le retour de l'execution de la fonction input et qui renvoie en message ("Voulez-vous jouer a un jeu pour gagner de l'argent \n>") 
+#definis a la variable scoreCpu qui est egale a 0
+#definis a la variable scoreJoueur qui est egale a 0
+
+#si joueur renvoie "yes" ou "oui":
+    #alors assigner variable continuer est vrai 
+#sinon 
+    #alors assigner variable continuer est faux 
+#Tant que vrai 
+    #assigner a la variable cpu ← jeu[element d'index qui renvoie un nombre aléatoire etant sois 0-1-2]
+    #definir joueur avec le retour de la fonction input et qui renvoie en message ("pierre, feuille ou ciseaux \n>")
+    #si joueur choisis "ciseaux"
+        #si le cpu choisis "pierre"
+            #alors augmenter le scoreCpu de 1
+            #alors afficher le message ("cpu winner")
+            #alors afficher le message("-----------------------\nJoueur  " + str(scoreJoueur) + " | "   +joueur +"\n"+ "CPU  " + str(scoreCpu) + " | " +cpu + "\n-----------------------")
+        #sinon, si  cpu choisis "feuille"
+            #alors augmenter le scoreJoueur de  1
+            #alors afficher le message("You win GG") 
+            #alors afficher le message("-----------------------\nJoueur  " + str(scoreJoueur) + " | "   +joueur +"\n"+ "CPU  " + str(scoreCpu) + " | " +cpu + "\n-----------------------")
+        #sinon 
+            #alors afficher le message("it's draw, retry")
+            #alors afficher le message("-----------------------\nJoueur  " + str(scoreJoueur) + " | "   +joueur +"\n"+ "CPU  " + str(scoreCpu) + " | " +cpu + "\n-----------------------")
+    #sinon, si  joueur choisis "feuille"
+        #si cpu choisis "pierre"
+            #alors augmenter le scoreJoueur de  1
+            #alors afficher le message("You win GG")
+            #alors afficher le message("-----------------------\nJoueur  " + str(scoreJoueur) + " | "   +joueur +"\n"+ "CPU  " + str(scoreCpu) + " | " +cpu + "\n-----------------------")
+        #sinon, si  cpu choisis "feuille"
+            #alors afficher le message("it's a draw, retry")
+            #alors afficher le message("-----------------------\nJoueur  " + str(scoreJoueur) + " | "   +joueur +"\n"+ "CPU  " + str(scoreCpu) + " | " +cpu + "\n-----------------------")
+        #sinon 
+            #alors augmenter le scoreCpu de  1
+            #alors afficher le message("cpu winner")
+            #alors afficher le message("-----------------------\nJoueur  " + str(scoreJoueur) + " | "   +joueur +"\n"+ "CPU  " + str(scoreCpu) + " | " +cpu + "\n-----------------------")
+    #sinon, si  joueur choisis "pierre"
+        #si cpu choisis "pierre"
+            #alors afficher le message("it's a draw, retry")
+            #alors afficher le message("-----------------------\nJoueur  " + str(scoreJoueur) + " | "   +joueur +"\n"+ "CPU  " + str(scoreCpu) + " | " +cpu + "\n-----------------------")
+        #sinon, si  cpu choisis "feuille"
+            #alors augmenter le scoreCpu de  1
+            #alors afficher le message("cpu winner")
+            #alors afficher le message("-----------------------\nJoueur  " + str(scoreJoueur) + " | "   +joueur +"\n"+ "CPU  " + str(scoreCpu) + " | " +cpu + "\n-----------------------")
+        #sinon 
+            #alors augmenter le scoreJoueur de  1
+            #alors afficher le message("You win, GG")
+            #alors afficher le message("-----------------------\nJoueur  " + str(scoreJoueur) + " | "   +joueur +"\n"+ "CPU  " + str(scoreCpu) + " | " +cpu + "\n-----------------------")
+
+
+    #si scoreJoueur est egale a  3
+        #alors afficher le message("GG jeune padawan, tu a gagner contre ce maudit bot")
+        #alors alors afficher le messagele message("Joueur  " + str(scoreJoueur)  +"\n"+ "CPU  " + str(scoreCpu) )
+        #alors assigner a la variable continuer est faux 
+    #sinon, si  scoreCpu est egale a 3
+        #alors alors afficher le messagele message("Passe le bonjour depuis la tombe de la honte, un bot restera un bot ")
+        #alors alors afficher le messagele message("Joueur  " + str(scoreJoueur)  +"\n"+ "CPU  " + str(scoreCpu))
+        #alors assigner a la variable continuer est faux 
+
+    
+
+
+#FIN
