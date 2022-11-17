@@ -1,0 +1,148 @@
+# admettant qu'il existe une fonction random qui renvoie un chiffre aleatoire
+# admettant qu'il existe une fonction input qui renvoie l'entrer d'un joueur
+
+# Creer une liste "tableJeu" qui servira de table de jeu --> [['-','-','-'],['-','-','-'],['-','-','-']]
+
+# definir une fonction showTable qui renvoie en parametre tableJeu
+#     afficher ("--------------")
+#     pour les lignes dans tableJeu 
+#         pour les items dans la ligne
+#             afficher (item, end←"  ")
+#         afficher ()
+#     afficher ("--------------\n")
+
+# definir une fonction "caseRemplie" qui renvoie en parametre "éboard, posx, posy"
+#     si board[posx][posy] = '-'
+#         alors renvoyer faux
+#     sinon 
+#         alors renvoyer vrai
+
+# ######################
+# definir une fonction is_player_win(board, player)
+#     la variable win est egale a None
+
+#     n est egale a la longueur de board
+
+    
+#     pour i allant de 0 à n-1
+#         win est egale a vrai
+#         pour j allant de 0 à n-1
+#             si board[i][j] different de player
+#                 alors win est egale a faux
+#                 alors stoppez
+#         si win
+#             alors renvoyer win
+
+    
+#     pour i allant de 0 à n-1
+#         win est egale a vrai
+#         pour j allant de 0 à n-1
+#             si board[j][i] different a player
+#                alors win est egale a faux
+#                alors stoppez 
+#         si win
+#             alors renvoyer win
+
+    
+
+
+
+#     win est egale vrai
+#     pour i allant de 0 à n-1
+#         si board[i][i] est different de  player
+#             alors win est egale faux
+#             alors stoppez
+#     si win
+#         alors renvoyer win
+
+#     win est egale vrai
+#     pour i allant de 0 à n-1
+#         si board[i][n - 1 - i] est different de player
+#             alors win est egale faux
+#             alors stoppez
+#     si win
+#         alors renvoyer win
+#     renvoyer faux
+
+ 
+# definir la fonction is_board_filled de parametre board
+#     pour les lignes dans les board
+#         pour les items dans les lignes
+#             si item = '-'
+#                 alors renvoyer faux
+#     renvoyer vrai
+
+
+
+# definir la fonction morpion()
+#     on creer un tableau vierge
+#     on demande au joueur 1 d'entrer son pseudo, il prendra X comme symbole de jeu
+#     on demande au joueur 2 d'entrer son pseudo, il prendra O comme symbole de jeu
+#     on donne au coup du joueur 1 le symbole "X"
+#     on donne au coup du joueur 2 le symbole "O"
+#     on creer une fonction playerStart qui permettra de definir qui commencera en utilisant la variable randint du module random
+#     si la fonction playerStart est egale a 1
+#           alors afficher (playerOne + ", commence \n")
+#           alors playerTurn est egale a playerOne
+#           alors playerShoot est egale a playerOneShoot
+#     sinon
+#           alors afficher (playerTwo + ", commence \n")
+#           alors playerTurn est egale a playerTwo
+#           alors playerShoot est egale a playerShootTwo
+
+#     correctShoot est egale a faux
+#     winJoueur est egale faux 
+
+#     rappeler la fonction showTable avec en parametre(tableJeu)
+#     Tant que winJoueur est egale a faux
+#         Tant que coupCorrect est egale a faux 
+#             afficher ("Au Tour de " + joueurTour + "\n")
+#             prendre un élément au hasard dansX qui sera egale a int(entrer("Choisissez la ligne à modifier ( 0 ← Ligne 1 ; 1 ← Ligne 2 ; 2 ← Ligne 3)  \n"))
+#             prendre un élément au hasard dansY qui sera egale a int(entrer("Choisissez la colonne à modifier ( 0 ← Colonne 1 ; 1 ← Colonne 2 ; 2 ← Colonne 3)  \n"))
+#             si caseRemplie(tableJeu, prendre un élément au hasard dansX, prendre un élément au hasard dansY) ≠ vrai
+#                 alors tableJeu[prendre un élément au hasard dansX][prendre un élément au hasard dansY] qui sera egale au coupJoueur
+#                 alors coupCorrect qui sera egale au vrai 
+#         rappeler la fonction showTable avec un parametre(tableJeu)
+
+#         si is_player_win(tableJeu, coupJoueur)
+#             alors afficher ( joueurTour +  " a gagné ! ")
+#             alors stoppez
+        
+#         si is_board_filled(tableJeu)
+#             alors afficher ("Egalité !")
+#             alors stoppez
+
+#         si coupJoueur est egale a coupjoueurUn
+#             alors coupJoueur est egale a coupjoueurDeux
+#             alors joueurTour est egale a joueurDeux
+#         sinon   
+#             alors coupJoueur est egale coupjoueurUn
+#             alors joueurTour est egale joueurUn
+
+#         coupCorrect est egale a faux
+    
+#     otherGame renvoie un input permettant de savoir si il veulent rejouer ou non avec comme message("Voulez-vous rejouer ? oui ou non : \n")
+#     si otherGame est egale a "oui" 
+#         alors afficher ("C'est reparti !")
+#           alors la liste tableGame est egale a [['-','-','-'],['-','-','-'],['-','-','-']]
+#           alors rappeler la fonction morpion()
+#     sinon si otherGame est egale a "non"
+#         alors afficher ("Au revoir !")
+#     sinon 
+    #       otherGame renvoie un input permettant de savoir si il veulent rejouer ou non avec comme message("Voulez-vous rejouer ? oui ou non : \n")
+    #     si otherGame est egale a "oui" 
+    #         alors afficher ("C'est reparti !")
+    #           alors la liste tableGame est egale a [['-','-','-'],['-','-','-'],['-','-','-']]
+    #           alors rappeler la fonction morpion()
+    #     sinon si otherGame est egale a "non"
+    #         alors afficher ("Au revoir !")
+    #     sinon 
+    #       otherGame renvoie un input permettant de savoir si il veulent rejouer ou non avec comme message("Voulez-vous rejouer ? oui ou non : \n")
+        #     si otherGame est egale a "oui" 
+        #         alors afficher ("C'est reparti !")
+        #           alors la liste tableGame est egale a [['-','-','-'],['-','-','-'],['-','-','-']]
+        #           alors rappeler la fonction morpion()
+        #     sinon si otherGame est egale a "non"
+        #         alors afficher ("Au revoir !")
+
+# rappeler la fonction morpion()
